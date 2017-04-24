@@ -1,0 +1,126 @@
+@charset "UTF-8";
+body{
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+#bloqueCartas{
+
+}
+.contenedorCarta{
+    width: 105px;
+    height: 105px;
+    display: inline-block;
+}
+button, .cuadrito, .cubridor, .cuadritoHecho{/*Animación para estos selectores*/
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.cuadrito, .cuadritoHecho{/*Div que contiene ambas caras*/
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #eee7ea;
+    margin: 2px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    display: table;
+}
+.cuadritoHecho{
+    background-color: #ffffff;
+}
+.cerrado{
+    -webkit-transform: scale(-1,1); /* Chrome, Safari, Opera */
+    transform: scale(-1,1);
+    cursor: pointer;
+}
+.abierto{
+    -webkit-transform: scale(1,1); /* Chrome, Safari, Opera */
+    transform: scale(1,1);
+}
+
+.cerrado .cubridor{
+    opacity: 1;
+}
+.abierto .cubridor{
+    opacity: 0;
+}
+
+.caraTapa{
+    background-color: #ff7b05;
+    background: url("reverso.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-transform: scale(-1,1); /* Chrome, Safari, Opera */
+    transform: scale(-1,1);
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    color: #FFF;
+    font-family: sans-serif;
+}
+.caraRespuesta{
+    width: 100%;
+    height: 100%;
+    display: table;
+    position: absolute;
+}
+.caraRespuesta div{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 6px;
+}
+.caraTapa.parte1{
+    border: 4px #fff solid;
+}
+.caraTapa.parte2{
+    border: 4px #000 solid;
+}
+.caraRespuesta.parte2{
+    font-weight: bold;
+}
+/* Estilos retroFinal*/
+.dialog-background{
+    background: none repeat scroll 0 0 rgba(0, 0, 25, 0.5);
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.dialog-loading-wrapper {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    left: 20%;
+    right: 20%;
+    position: fixed;
+    top: 30%;
+    z-index: 101;
+}
+.dialog-loading-icon {
+    background-color: #FFFFFF !important;
+    border-radius: 13px;
+    display: block;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+}
+#botonCerrarRetro{
+    /*float: right;*/
+    cursor: pointer;
+}
+#retroFinalMensaje{
+    clear: both;
+    text-align: center;
+}
+#retroFinalMensaje ul{
+    padding: 14px;
+}
+/* FIN Estilos retroFinal */

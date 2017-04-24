@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Juego de memoria</title>
+    <meta name="author" content="Adib Abud Jaso">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+<div class="dialog-background" id="retroFinal" style="display: none;">
+    <div class="dialog-loading-wrapper">
+        <div class="dialog-loading-icon">
+            <!-- <img id="botonCerrarRetro" src="imagenes/botonCerrar.png" alt="boton cerrar" /> -->
+            <div id="retroFinalMensaje">
+                Great job!
+                <br />
+                <button id="botonCerrarRetro">Play again</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<h1>Memory game</h1>
+
+<div id="bloqueCartas">
+    <div id="Parte1">
+        <div class="contenedorCarta" data-respuesta="par1"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Bring</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par2"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Build</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par3"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Buy</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par4"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Carry</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par5"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Consider</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par6"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Design</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par7"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Extract</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par8"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Find</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par9"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Fly</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par10"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Grow</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par11"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Heat</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par12"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Hold</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par13"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Invent</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par14"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Make</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par15"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Manufacture</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par16"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Need</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par17"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Open</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par18"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Produce</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par19"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Recognize</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par20"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Specialize</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par21"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Take</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par22"><div class="cuadrito cerrado"><div class="caraRespuesta parte1"><div>Use</div></div><div class="caraTapa cubridor parte1"></div></div></div>
+    </div>
+
+
+
+    <div id="Parte2">
+        <div class="contenedorCarta" data-respuesta="par1"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Brought</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par2"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Built</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par3"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Bought</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par4"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Carried</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par5"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Considered</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par6"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Designed</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par7"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Extracted</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par8"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Found</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par9"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Flown</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par10"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Grown</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par11"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Heated</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par12"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Held</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par13"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Invented</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par14"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Made</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par15"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Manufactured</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par16"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Needed</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par17"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Opened</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par18"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Produced</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par19"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Recognized</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par20"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Specialized</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par21"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Taken</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+        <div class="contenedorCarta" data-respuesta="par22"><div class="cuadrito cerrado"><div class="caraRespuesta parte2"><div>Used</div></div><div class="caraTapa cubridor parte2"></div></div></div>
+    </div>
+
+
+</div>
+<audio id="audioRetroBien">
+    <source src="audios/correct.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<audio id="audioRetroMal">
+    <source src="audios/wrong.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
